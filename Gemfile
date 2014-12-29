@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 
 ruby '2.2.0'
+#ruby '1.9.3', engine: 'jruby', engine_version: '1.7.18'
+#ruby '1.9.3', :engine => 'rbx', :engine_version => '2.2.10'
 
 gem 'sinatra'
 gem 'faker'
