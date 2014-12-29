@@ -2,6 +2,8 @@ require 'sinatra'
 require 'faker'
 require 'concurrent'
 
+require 'rbconfig'
+
 HEAD = <<-HTML
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
     "http://www.w3.org/TR/html4/strict.dtd">
@@ -25,10 +27,25 @@ get '/' do
   end
 
   ext = Concurrent::Future.execute do
-    'constant' == defined?(Concurrent::CAtomic)
+    ! defined?(Concurrent::CAtomic).nil?
   end
 
   ext = ext.value ? 'C extensions are loaded' : 'Pure Ruby, baby!'
 
-  HEAD + '<h1>' + tagline.value + '</h1><p>' + ext + '</p>' + TAIL
+  response = HEAD +
+    '<h1>' + tagline.value +
+    '</h1><p>' + ext + '</p>' +
+    '<table border="1">'
+
+  response +=
+    '<tr><td>RUBY_VERSION</td><td>' + RUBY_VERSION + '</td></tr>' +
+    '<tr><td>RUBY_ENGINE</td><td>' + RUBY_ENGINE + '</td></tr>' +
+    '<tr><td>RUBY_PLATFORM</td><td>' + RUBY_PLATFORM + '</td></tr>'
+
+  #RbConfig::CONFIG.each do |key, value|
+    #response += '<tr><td>' + key + '</td><td>' + value + '</td></tr>'
+  #end
+
+    response += '</table>' + TAIL
+    response
 end
