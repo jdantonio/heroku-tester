@@ -1,36 +1,31 @@
-*.gem
-lib/1.8
-lib/1.9
-lib/2.0
+*.rbc
+capybara-*.html
+.rspec
+/log
+/tmp
+/db/*.sqlite3
+/public/system
+/coverage/
+/spec/tmp
+**.orig
+rerun.txt
+pickle-email-*.html
+
+# TODO Comment out these rules if you are OK with secrets being uploaded to the repo
+config/initializers/secret_token.rb
+config/secrets.yml
+
+## Environment normalisation:
+/.bundle
+/vendor/bundle
+
+# these should all be checked in to normalise the environment:
+# Gemfile.lock, .ruby-version, .ruby-gemset
+
+# unless supporting rvm < 1.11.0 or doing something fancy, ignore this:
 .rvmrc
-.ruby-version
-.ruby-gemset
-.bundle/*
-.yardoc/*
-yardoc/*
-tmp/*
-man/*
-*.tmproj
-rdoc/*
-*.orig
-*.BACKUP.*
-*.BASE.*
-*.LOCAL.*
-*.REMOTE.*
-git_pull.txt
-coverage
-critic
-.DS_Store
-TAGS
-tmtags
-*.sw?
-.idea
-.rbx/*
-lib/*.bundle
-lib/*.so
-lib/*.jar
-ext/*.bundle
-ext/*.so
-ext/*.jar
-pkg
-*.gem
+
+# if using bower-rails ignore default bower_components path bower.json files
+/vendor/assets/bower_components
+*.bowerrc
+bower.json
