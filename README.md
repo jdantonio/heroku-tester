@@ -1,4 +1,6 @@
-# Heroku Tester for Concurrent Ruby
+# Simple Sinatra app for testing Concurrent Ruby on Heroku.
+
+For more information see http://concurrent-ruby.
 
 * https://devcenter.heroku.com/articles/rack
 * https://devcenter.heroku.com/articles/ruby-versions

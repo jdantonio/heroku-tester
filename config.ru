@@ -1,2 +1,2 @@
-require_relative './hello'
+require './hello'
 run Sinatra::Application
