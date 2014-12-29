@@ -37,10 +37,18 @@ get '/' do
     '</h1><p>' + ext + '</p>' +
     '<table border="1">'
 
+  begin
+    require 'concurrent_ruby_ext'
+  rescue LoadError => ex
+    response += "<tr><td>#{ex.class}</td><td>#{ex.message}</td></tr>"
+  end
+
   response +=
     '<tr><td>RUBY_VERSION</td><td>' + RUBY_VERSION + '</td></tr>' +
     '<tr><td>RUBY_ENGINE</td><td>' + RUBY_ENGINE + '</td></tr>' +
-    '<tr><td>RUBY_PLATFORM</td><td>' + RUBY_PLATFORM + '</td></tr>'
+    '<tr><td>defined?(Concurrent::CAtomic)</td><td>' + defined?(Concurrent::CAtomic).to_s + '</td></tr>' +
+    '<tr><td>defined?(Concurrent::CAtomicBoolean)</td><td>' + defined?(Concurrent::CAtomicBoolean).to_s + '</td></tr>'+ 
+    '<tr><td>defined?(Concurrent::CAtomicFixnum)</td><td>' + defined?(Concurrent::CAtomicFixnum).to_s + '</td></tr>'
 
   #RbConfig::CONFIG.each do |key, value|
     #response += '<tr><td>' + key + '</td><td>' + value + '</td></tr>'
