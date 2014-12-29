@@ -42,9 +42,9 @@ get '/' do
     '<tr><td>RUBY_ENGINE</td><td>' + RUBY_ENGINE + '</td></tr>' +
     '<tr><td>RUBY_PLATFORM</td><td>' + RUBY_PLATFORM + '</td></tr>'
 
-  RbConfig::CONFIG.each do |key, value|
-    response += '<tr><td>' + key + '</td><td>' + value + '</td></tr>'
-  end
+  #RbConfig::CONFIG.each do |key, value|
+    #response += '<tr><td>' + key + '</td><td>' + value + '</td></tr>'
+  #end
 
   response += '</table>' + TAIL
   response
