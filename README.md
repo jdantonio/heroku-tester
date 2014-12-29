@@ -7,3 +7,4 @@ For more information see http://concurrent-ruby.
 * http://bundler.io/v1.3/gemfile_ruby.html
 * https://blog.heroku.com/archives/2012/12/13/run_jruby_on_heroku_right_now
 * http://rubini.us/2013/02/26/heroku-cedar-rubinius-2-puma-2-in-three-easy-steps/
+* https://github.com/rubinius/rubinius/issues/3210
