@@ -44,6 +44,7 @@ get '/' do
   end
 
   response +=
+    '<tr><td>LD_LIBRARY_PATH</td><td>' + ENV['LD_LIBRARY_PATH'] + '</td></tr>' +
     '<tr><td>RUBY_VERSION</td><td>' + RUBY_VERSION + '</td></tr>' +
     '<tr><td>RUBY_ENGINE</td><td>' + RUBY_ENGINE + '</td></tr>' +
     '<tr><td>defined?(Concurrent::CAtomic)</td><td>' + defined?(Concurrent::CAtomic).to_s + '</td></tr>' +
