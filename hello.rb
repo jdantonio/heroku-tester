@@ -44,12 +44,12 @@ get '/' do
     response += "<tr><td>#{ex.class}</td><td>#{ex.message}</td></tr>"
   end
 
-  #begin
-    #require 'v8'
-    #response += "<tr><td>therubyracer</td><td>loaded</td></tr>"
-  #rescue LoadError => ex
-    #response += "<tr><td>#{ex.class}</td><td>#{ex.message}</td></tr>"
-  #end
+  begin
+    require 'v8'
+    response += "<tr><td>therubyracer</td><td>loaded</td></tr>"
+  rescue LoadError => ex
+    response += "<tr><td>#{ex.class}</td><td>#{ex.message}</td></tr>"
+  end
 
   response +=
     '<tr><td>RUBY_VERSION</td><td>' + RUBY_VERSION + '</td></tr>' +
