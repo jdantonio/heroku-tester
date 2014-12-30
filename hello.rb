@@ -45,7 +45,7 @@ get '/' do
   end
 
   begin
-    require 'therubyracer'
+    require 'v8'
     response += "<tr><td>therubyracer</td><td>loaded</td></tr>"
   rescue LoadError => ex
     response += "<tr><td>#{ex.class}</td><td>#{ex.message}</td></tr>"
