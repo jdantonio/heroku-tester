@@ -10,5 +10,5 @@ gem 'faker'
 #gem 'concurrent-ruby', '0.8.0.pre1'
 gem 'concurrent-ruby-ext', '0.1.0.pre1'
 
-gem 'libv8', '~> 3.11.8'
-gem 'therubyracer', '0.11.0beta8'
+#gem 'libv8', '~> 3.11.8'
+#gem 'therubyracer', '0.11.0beta8'
