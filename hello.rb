@@ -39,12 +39,19 @@ get '/' do
 
   begin
     require 'concurrent_ruby_ext'
+    response += "<tr><td>concurrent_ruby_ext</td><td>loaded</td></tr>"
+  rescue LoadError => ex
+    response += "<tr><td>#{ex.class}</td><td>#{ex.message}</td></tr>"
+  end
+
+  begin
+    require 'therubyracer'
+    response += "<tr><td>therubyracer</td><td>loaded</td></tr>"
   rescue LoadError => ex
     response += "<tr><td>#{ex.class}</td><td>#{ex.message}</td></tr>"
   end
 
   response +=
-    '<tr><td>LD_LIBRARY_PATH</td><td>' + ENV['LD_LIBRARY_PATH'].to_s + '</td></tr>' +
     '<tr><td>RUBY_VERSION</td><td>' + RUBY_VERSION + '</td></tr>' +
     '<tr><td>RUBY_ENGINE</td><td>' + RUBY_ENGINE + '</td></tr>' +
     '<tr><td>defined?(Concurrent::CAtomic)</td><td>' + defined?(Concurrent::CAtomic).to_s + '</td></tr>' +
