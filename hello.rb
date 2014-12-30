@@ -38,8 +38,8 @@ get '/' do
     '<table border="1">'
 
   begin
-    require 'concurrent/extension'
-    response += "<tr><td>concurrent/extension</td><td>loaded</td></tr>"
+    require 'concurrent_ruby_ext'
+    response += "<tr><td>concurrent_ruby_ext</td><td>loaded</td></tr>"
   rescue LoadError => ex
     response += "<tr><td>#{ex.class}</td><td>#{ex.message}</td></tr>"
   end
