@@ -1,10 +1,10 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    concurrent-ruby (0.8.0.pre2)
+    concurrent-ruby (0.8.0.pre1)
       ref (~> 1.0, >= 1.0.5)
-    concurrent-ruby-ext (0.8.0.pre2)
-      concurrent-ruby (~> 0.8.0.pre2)
+    concurrent-ruby-ext (0.1.0.pre1)
+      concurrent-ruby (~> 0.8.0.pre1)
     faker (1.4.3)
       i18n (~> 0.5)
     i18n (0.7.0)
@@ -22,6 +22,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  concurrent-ruby-ext (= 0.8.0.pre2)
+  concurrent-ruby-ext (= 0.1.0.pre1)
   faker
   sinatra
