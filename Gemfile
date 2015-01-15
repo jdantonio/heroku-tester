@@ -9,6 +9,3 @@ gem 'faker'
 
 #gem 'concurrent-ruby', '0.8.0.pre2'
 gem 'concurrent-ruby-ext', '0.8.0.pre2'
-
-gem 'libv8', '~> 3.11.8'
-gem 'therubyracer', '0.11.0beta8'
