@@ -3,7 +3,6 @@ GEM
   specs:
     concurrent-ruby (0.8.0.pre2)
       ref (~> 1.0, >= 1.0.5)
-    concurrent-ruby (0.8.0.pre2-java)
     faker (1.4.3)
       i18n (~> 0.5)
     i18n (0.7.0)
@@ -18,7 +17,6 @@ GEM
     tilt (1.4.1)
 
 PLATFORMS
-  java
   ruby
 
 DEPENDENCIES
