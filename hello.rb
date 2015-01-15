@@ -41,14 +41,14 @@ get '/' do
     require 'concurrent/extension'
     response += "<tr><td>C extensions</td><td>loaded</td></tr>"
   rescue LoadError => ex
-    response += "<tr><td>#{ex.class}</td><td>#{ex.message}</td></tr>"
+    response += "<tr><td>C extensions</td><td>#{ex.message}</td></tr>"
   end
 
   begin
     require 'concurrent_ruby_ext'
     response += "<tr><td>Java extensions</td><td>loaded</td></tr>"
   rescue LoadError => ex
-    response += "<tr><td>#{ex.class}</td><td>#{ex.message}</td></tr>"
+    response += "<tr><td>Java extensions</td><td>#{ex.message}</td></tr>"
   end
 
   response +=
